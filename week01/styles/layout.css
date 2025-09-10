@@ -62,5 +62,6 @@ header h1 {
     background-color: rgb(71, 69, 65);
     padding: 2rem;
     grid-column: 1/4;
+    color: #ffff;
 
 }
