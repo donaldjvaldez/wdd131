@@ -17,16 +17,27 @@
     grid-template-columns: 1fr 1fr 1fr 1fr;
     position: relative;
     padding: 10px;
+    color: #ffff;
+}
+
+.holy-grail-layout nav a {
+    text-decoration: none;
+    color: #ffff;
+    font-size: 1.3rem;
+}
+
+header {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
 }
 
 .holy-grail-layout header {
     background-color: rgb(71, 69, 65);
-    padding: 0;
+    padding: 10;
     grid-column: 1/4;
     height: 15vw;
-    display: grid;
-    grid-template-rows: 1fr auto;
-
+    color: #ffff;
 }
 
 .holy-grail-layout main {
