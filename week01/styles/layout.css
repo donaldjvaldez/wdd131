@@ -1,0 +1,51 @@
+/* Holy grail layout */
+* {
+    box-sizing: border-box;
+    border: 0;
+}
+
+.holy-grail-layout {
+    display: grid;
+    grid-template: auto 1fr auto / auto 1fr auto;
+
+
+}
+
+.holy-grail-layout nav {
+    background-color: rgb(10, 10, 10);
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    position: relative;
+    bottom: -50px;
+    padding: 10px;
+}
+
+.holy-grail-layout header {
+    background-color: rgb(71, 69, 65);
+    padding: 0;
+    grid-column: 1/4;
+    height: 15vw;
+
+}
+
+.holy-grail-layout main {
+    background-color: rgb(147, 146, 145);
+    padding: 2rem;
+    grid-column: 1/3;
+    height: 50vw;
+
+}
+
+.holy-grail-layout aside {
+    background-color: rgb(255, 254, 253);
+    padding: 2rem;
+    grid-column: 3/4;
+    height: 25vw;
+}
+
+.holy-grail-layout footer {
+    background-color: rgb(71, 69, 65);
+    padding: 2rem;
+    grid-column: 1/4;
+
+}
