@@ -32,9 +32,12 @@ header {
     justify-content: flex-end;
 }
 
+header h1 {
+    padding: 25px;
+}
+
 .holy-grail-layout header {
     background-color: rgb(71, 69, 65);
-    padding: 10;
     grid-column: 1/4;
     height: 15vw;
     color: #ffff;
