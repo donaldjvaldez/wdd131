@@ -1,0 +1,121 @@
+/* Reset and base styles */
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+}
+
+/* Holy Grail Grid Layout */
+.holy-grail-layout {
+    display: grid;
+    grid-template-areas:
+        "header header"
+        "main aside"
+        "footer footer";
+    grid-template-columns: 3fr 1fr;
+    grid-template-rows: auto 1fr auto;
+    min-height: 100vh;
+}
+
+/* Grid area assignments */
+header {
+    grid-area: header;
+    background-color: #003da0;
+    color: white;
+    text-align: center;
+    font-size: 1.5rem;
+    font-weight: bold;
+    padding: 50px 0 0 0;
+    /* Remove padding to let grid work properly */
+    display: grid;
+    grid-template-rows: 1fr auto;
+    /* Heading takes space, nav sits at bottom */
+    align-items: stretch;
+}
+
+
+nav {
+    background-color: #444;
+    display: flex;
+    justify-content: space-between;
+    /* Spread links evenly */
+    align-items: center;
+    padding: 10px 40px;
+    margin-top: 0;
+    border-radius: 0 0 8px 8px;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    font-size: 1.3rem;
+    font-weight: bold;
+}
+
+main {
+    grid-area: main;
+    padding: 2rem;
+    background-color: #f9f9f9;
+}
+
+main img {
+    width: 200px;
+    height: auto;
+    display: block;
+    margin: 0 auto;
+}
+
+main {
+    border: 2px solid #003da0;
+    border-radius: 8px;
+    margin-bottom: 2rem;
+    padding: 0;
+    overflow: hidden;
+    background: #fff;
+    display: flex;
+    flex-direction: column;
+}
+
+.card h1 {
+    background-color: #003da0;
+    color: #fff;
+    margin: 0;
+    padding: 1rem;
+    font-size: 1.3rem;
+    border-bottom: 1px solid #003da0;
+}
+
+.card-content {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding: 1rem;
+    gap: 1.5rem;
+}
+
+.card-content img {
+    width: 220px;
+    height: auto;
+    border-radius: 6px;
+    flex-shrink: 0;
+}
+
+.card-content p {
+    margin: 0;
+    font-size: 1rem;
+    line-height: 1.5;
+    flex: 1;
+}
+
+aside {
+    grid-area: aside;
+    padding: 2rem;
+    background-color: #eaeaea;
+}
+
+footer {
+    grid-area: footer;
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 1rem;
+}
