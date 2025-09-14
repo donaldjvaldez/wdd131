@@ -1,7 +1,7 @@
 /* Reset and base styles */
 body {
     margin: 0;
-    font-family: Arial, sans-serif;
+    font-family: 'Inter', 'Roboto', sans-serif;
 }
 
 /* Holy Grail Grid Layout */
@@ -51,10 +51,18 @@ nav a {
     font-weight: bold;
 }
 
+nav a:hover {
+    background-color: #fdfeff;
+    border: black;
+    padding: 1px;
+    color: rgb(12, 5, 5);
+}
+
 main {
     grid-area: main;
     padding: 2rem;
     background-color: #f9f9f9;
+    max-width: 900px;
 }
 
 main img {
@@ -65,7 +73,7 @@ main img {
 }
 
 main {
-    border: 2px solid #003da0;
+    border: 2px solid #a2c6fe;
     border-radius: 8px;
     margin-bottom: 2rem;
     padding: 0;
@@ -75,7 +83,7 @@ main {
     flex-direction: column;
 }
 
-.card h1 {
+.card h2 {
     background-color: #003da0;
     color: #fff;
     margin: 0;
