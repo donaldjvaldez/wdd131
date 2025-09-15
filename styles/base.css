@@ -118,6 +118,10 @@ main {
     flex: 1;
 }
 
+section.card h2 {
+    font-size: 1.5rem;
+}
+
 aside {
     grid-area: aside;
     padding: 2rem;
@@ -125,7 +129,7 @@ aside {
 }
 
 aside h1 {
-    font-size: 1.8rem;
+    font-size: 1.3rem;
 }
 
 footer {
