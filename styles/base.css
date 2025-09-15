@@ -65,6 +65,10 @@ main {
     max-width: 900px;
 }
 
+main h1 {
+    font-size: 1.8rem;
+}
+
 main img {
     width: 200px;
     height: auto;
@@ -118,6 +122,10 @@ aside {
     grid-area: aside;
     padding: 2rem;
     background-color: #eaeaea;
+}
+
+aside h1 {
+    font-size: 1.8rem;
 }
 
 footer {
