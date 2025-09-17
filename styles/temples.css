@@ -33,13 +33,13 @@ main {
     place-items: center;
 }
 
-main h1 {
+main h2 {
     color: #00568f;
     display: flex;
     justify-content: center;
-    border-color: solid #333 1px;
     padding: 15px;
     font-weight: bolder;
+    font-size: 2rem;
 }
 
 figcaption {
