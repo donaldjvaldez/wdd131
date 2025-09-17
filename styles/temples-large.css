@@ -1,0 +1,57 @@
+/* Desktop view */
+@media (min-width: 1024px) {
+    header {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 2rem 3rem;
+        font-size: 1.5rem;
+    }
+
+
+    nav ul {
+        justify-content: flex-end;
+        flex-direction: row;
+    }
+
+
+    .images-container {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        justify-content: center;
+    }
+
+    .navigation {
+        display: flex;
+        gap: 10rem;
+        background-color: #00568f;
+
+
+    }
+
+    .navigation li {
+        display: block;
+        flex: 1 1 100%;
+
+    }
+
+    li {
+        color: #ffff;
+    }
+
+    .navigation a {
+        text-align: center;
+    }
+
+    #menu {
+        display: none;
+    }
+}
+
+/* Tablets view */
+@media (min-width: 640px) and (max-width: 1023px) {
+    .images-container {
+        grid-template-columns: repeat(2, 1fr);
+        justify-content: center;
+    }
+}
