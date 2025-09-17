@@ -22,9 +22,8 @@
 
     .navigation {
         display: flex;
-        gap: 10rem;
+        gap: 5rem;
         background-color: #00568f;
-        flex-shrink: initial;
 
     }
 

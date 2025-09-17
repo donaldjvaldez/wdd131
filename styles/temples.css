@@ -14,7 +14,7 @@ header {
     background-color: #00568f;
     display: grid;
     grid-template-columns: 1fr auto;
-    grid-template-rows: 0.2fr 1fr;
+    grid-template-rows: 0.1fr 1fr;
     grid-template-areas:
         "h1 menu"
         "nav nav";
@@ -57,11 +57,14 @@ figcaption {
     font-size: 1rem;
 }
 
-figure,
-img {
+figure {
     width: 450px;
     height: auto;
+}
 
+img {
+    width: 100%;
+    height: auto;
 }
 
 h1 {
@@ -72,6 +75,7 @@ h1 {
 nav {
     background-color: #00568f;
     grid-area: nav;
+    margin-right: 50px;
 }
 
 nav ul {
