@@ -16,7 +16,6 @@
 
 
     .images-container {
-        display: grid;
         grid-template-columns: repeat(3, 1fr);
         justify-content: center;
     }
@@ -25,7 +24,7 @@
         display: flex;
         gap: 10rem;
         background-color: #00568f;
-
+        flex-shrink: initial;
 
     }
 
@@ -35,12 +34,9 @@
 
     }
 
-    li {
-        color: #ffff;
-    }
-
     .navigation a {
         text-align: center;
+        color: #fff;
     }
 
     #menu {
