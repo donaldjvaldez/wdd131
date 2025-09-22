@@ -128,11 +128,6 @@
         justify-items: end;
     }
 
-    li {
-        margin-right: ;
-    }
-
-
     /* weather icon: keep it inline inside the card (no absolute) */
     .weather img {
         position: relative;
