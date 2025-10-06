@@ -1,0 +1,66 @@
+/* Desktop view */
+@media (min-width: 1024px) {
+    header {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 2rem 3rem;
+        font-size: 1.5rem;
+    }
+
+
+    nav ul {
+        justify-content: flex-end;
+        flex-direction: row;
+    }
+
+
+    .images-container {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 1.5rem;
+        margin: 0.5rem;
+        padding: 1rem;
+    }
+
+    .images-container h3 {
+        margin-top: 0;
+        font-size: 1.25rem;
+    }
+
+    .images-container section:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 8px 16px rgba(0, 0, 0, 0.25);
+    }
+
+
+    .navigation {
+        display: flex;
+        gap: 5rem;
+        background-color: #00568f;
+
+    }
+
+    .navigation li {
+        display: block;
+        flex: 1 1 100%;
+
+    }
+
+    .navigation a {
+        text-align: center;
+        color: #fff;
+    }
+
+    #menu {
+        display: none;
+    }
+}
+
+/* Tablets view */
+@media (min-width: 640px) and (max-width: 1023px) {
+    .images-container {
+        grid-template-columns: repeat(2, 1fr);
+        justify-content: center;
+    }
+}
