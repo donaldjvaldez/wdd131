@@ -93,7 +93,7 @@ textarea {
 .rating input:checked~label,
 .rating label:hover,
 .rating label:hover~label {
-    color: gold;
+    color: black;
     /* selected/hover color */
 }
 
