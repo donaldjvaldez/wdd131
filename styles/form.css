@@ -1,0 +1,154 @@
+/* Form Styles */
+:root {
+    --blue: #004e68;
+    --red: #CE1126;
+    --withe: #fff;
+    --border: 1px solid #c4c4c4;
+    --fontFamily: "Roboto", sans-serif;
+}
+
+body {
+    font-family: var(--fontFamily);
+    background-color: var(--withe);
+    margin: 0;
+    padding: 0;
+    line-height: 1.6;
+}
+
+header {
+    background-color: var(--blue);
+    color: var(--withe);
+    text-align: center;
+    padding: 1rem;
+    font-family: var(--fontFamily);
+}
+
+h1 {
+    margin: 0;
+    font-size: 2.5rem;
+}
+
+main {
+    max-width: 800px;
+    margin: 2rem auto;
+    padding: 1rem;
+    background-color: var(--withe);
+    border-radius: 6px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+
+fieldset {
+    border: var(--border);
+    border-radius: 6px;
+    margin-bottom: 1.5rem;
+    padding: 1rem;
+}
+
+legend {
+    font-weight: bold;
+    color: var(--blue);
+    padding: 0 0.5rem;
+}
+
+label {
+    display: block;
+    font-weight: bold;
+}
+
+input[type="text"],
+input[type="date"],
+select,
+textarea {
+    width: 100%;
+    padding: 0.5rem;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 1rem;
+    box-sizing: border-box;
+    margin-bottom: 1rem;
+}
+
+.rating {
+    display: flex;
+    justify-content: left;
+    direction: rtl;
+
+
+}
+
+.rating input {
+    display: none;
+}
+
+.rating label {
+    font-size: 2.2rem;
+    color: #ccc;
+    cursor: pointer;
+    padding: 0 0.15rem;
+
+}
+
+/* color stars for checked rating: the checked input affects following labels (because direction: rtl) */
+.rating input:checked~label,
+.rating label:hover,
+.rating label:hover~label {
+    color: gold;
+    /* selected/hover color */
+}
+
+input[type="checkbox"] {
+    display: inline;
+    margin-bottom: 1rem;
+    margin-right: 1rem;
+}
+
+label[for="review"]::after,
+label[for="userName"]::after {
+    content: " (Optional)";
+    color: var(--red);
+    font-weight: 400;
+    font-size: 0.9rem;
+    margin-left: 0.25rem;
+}
+
+input[type="submit"] {
+    background-color: var(--red);
+    color: white;
+    border: none;
+    padding: 0.75rem 1.5rem;
+    border-radius: 4px;
+    font-size: 1.1rem;
+    cursor: pointer;
+    align-self: flex-start;
+    margin-top: 1rem;
+}
+
+input[type="submit"]:hover {
+    background-color: #28a745;
+    border: 2px solid #000000;
+}
+
+footer {
+    text-align: center;
+    padding: 1rem;
+    background-color: var(--blue);
+    color: var(--withe);
+    margin-top: 2rem;
+}
+
+footer p {
+    margin: 0.5rem 0;
+}
+
+/* Responsive */
+@media (max-width: 600px) {
+    main {
+        margin: 1rem;
+        padding: 0.5rem;
+    }
+
+    h1 {
+        font-size: 2rem;
+    }
+}

@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Product Review Form</title>
+    <meta name="author" content="Donald Jared Valdez Savinon">
+    <meta name="description"
+        content="Share your feedback and rate products with our Product Review Form. Help others make informed decisions by leaving honest reviews and product ratings.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="styles/form.css">
+    <script src="scripts/form.js" defer></script>
+</head>
+
+<body>
+    <header>
+        <h1>Product Review</h1>
+    </header>
+    <main>
+        <form method="get" action="review.html">
+            <fieldset>
+                <legend>Product Name</legend>
+                <label>Product Name:<select id="product" name="product" required>
+                        <option value="" disabled selected>Select a Product ...</option>
+                    </select></label>
+
+                <label>Overall Rating:</label>
+                <div class="rating" role="radiogroup" aria-label="Overall rating">
+                    <input type="radio" id="rating5" name="rating" value="5">
+                    <label for="rating5" title="5 stars">★</label>
+
+                    <input type="radio" id="rating4" name="rating" value="4">
+                    <label for="rating4" title="4 stars">★</label>
+
+                    <input type="radio" id="rating3" name="rating" value="3">
+                    <label for="rating3" title="3 stars">★</label>
+
+                    <input type="radio" id="rating2" name="rating" value="2">
+                    <label for="rating2" title="2 stars">★</label>
+
+                    <input type="radio" id="rating1" name="rating" value="1" required>
+                    <label for="rating1" title="1 star">★</label>
+                </div>
+
+
+                <label for="installDate">Date of Installation:</label>
+                <input type="date" id="installDate" name="installDate" required>
+            </fieldset>
+
+            <fieldset class="features">
+                <legend>Useful Features</legend>
+                <label><input type="checkbox" id="design" name="features" value="Design"> Design</label>
+                <label><input type="checkbox" id="durability" name="features" value="Durability"> Durability</label>
+                <label><input type="checkbox" id="ease" name="features" value="Ease of Use"> Ease of Use</label>
+                <label><input type="checkbox" id="performance" name="features" value="Performance"> Performance</label>
+            </fieldset>
+
+            <fieldset>
+                <legend>Review</legend>
+                <label for="review">Written Review:</label>
+                <textarea id="review" name="review" rows="4" cols="50"></textarea>
+
+                <label for="userName">Your Name:</label>
+                <input type="text" id="userName" name="userName">
+            </fieldset>
+
+            <input type="submit" value="Post Review">
+        </form>
+    </main>
+    <footer>
+        <p>&copy; <span id="currentyear"></span>, Donald Jared Valdez Savinon, Dominican Republic</p>
+        <p id="lastModified"></p>
+    </footer>
+</body>
+
+</html>
