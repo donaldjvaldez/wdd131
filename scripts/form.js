@@ -53,17 +53,26 @@ function populateProductOptions() {
         select.appendChild(option);
     });
 }
-// Populate product select options dynamically
-// function populateProductOptions() {
-//     const select = document.getElementById('product');
-//     products.forEach(product => {
-//         const option = document.createElement('option');
-//         option.value = product.name; // value attribute is product name as per instructions
-//         option.textContent = product.name;
-//         select.appendChild(option);
-//     });
-// }
-
 document.addEventListener('DOMContentLoaded', () => {
     populateProductOptions();
+});
+
+// reviews counter
+
+document.addEventListener('DOMContentLoaded', () => {
+    // Get URL parameters
+    const urlParams = new URLSearchParams(window.location.search);
+    const summaryDiv = document.getElementById('reviewSummary');
+    let summary = '<ul>';
+    for (const [key, value] of urlParams) {
+        summary += `<li><strong>${key}:</strong> ${value}</li>`;
+    }
+    summary += '</ul>';
+    summaryDiv.innerHTML = summary;
+
+    // Increment and display review count
+    let reviewCount = localStorage.getItem('reviewCount') || 0;
+    reviewCount = parseInt(reviewCount) + 1;
+    localStorage.setItem('reviewCount', reviewCount);
+    document.getElementById('reviewCount').textContent = reviewCount;
 });
