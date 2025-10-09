@@ -1,0 +1,31 @@
+body {
+    font-family: 'Roboto', sans-serif;
+    background-color: #F0F8FF;
+    color: #333;
+    margin: 20px;
+    line-height: 1.6;
+
+}
+
+main {
+    max-width: 90%;
+    margin: 5%;
+}
+
+h1,
+h2 {
+    font-family: 'Nunito', sans-serif;
+    color: #2E8B57;
+}
+
+header,
+footer {
+    text-align: center;
+    padding: 10px;
+    background-color: #ccc;
+}
+
+img {
+    border: 1px solid #ccc;
+    border-radius: 8px;
+}
