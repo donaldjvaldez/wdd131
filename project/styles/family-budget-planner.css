@@ -1,7 +1,7 @@
 :root {
-    --main-color: #2E8B57;
+    --main-color: #1b5233;
     /* Sea Green */
-    --bg-light: #F0F8FF;
+    --bg-light: #fafafa;
     /* Alice Blue (used sparingly) */
     --text: #333333;
     /* Neutral dark for text */
@@ -24,11 +24,12 @@ body {
 }
 
 header img {
-    max-width: 15%;
+    width: 150px;
+    color: var(--main-color);
 }
 
 /* Desktop view */
-@media (min-width: 1024px) {
+@media (min-width: 769px) {
     header {
         display: flex;
         align-items: center;
@@ -120,7 +121,7 @@ header img {
 
 .primary-btn {
     background-color: var(--main-color);
-    color: #fff;
+    color: var(--h-bg);
 }
 
 .primary-btn:hover {
@@ -135,7 +136,7 @@ header img {
 
 .secondary-btn:hover {
     background-color: var(--main-color);
-    color: #fff;
+    color: var(--h-bg);
 }
 
 /* Hero image */
@@ -154,8 +155,141 @@ header img {
     border-radius: 10px;
 }
 
+.site-footer {
+    background-color: var(--bg-dark);
+    color: var(--text-light);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    padding: 1rem;
+    font-size: 0.9rem;
+    border-top: 2px solid var(--main-color);
+}
+
+.footer-left {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.footer-logo {
+    height: 35px;
+    width: auto;
+}
+
+.footer-left p {
+    margin: 0;
+
+}
+
+footer p {
+    font-family: var(--h-family-font);
+    color: var(--text-light);
+}
+
+.footer-right {
+    display: flex;
+    gap: 1rem;
+}
+
+.social-icon svg {
+    width: 24px;
+    height: 24px;
+    color: var(--text);
+    transition: color 0.3s ease, transform 0.3s ease;
+}
+
+.social-icon:hover svg {
+    color: var(--main-color);
+    transform: scale(1.1);
+}
+
+
 /* Responsive adjustments */
 @media (max-width: 768px) {
+
+    /* HAMBURGUER NAV MENU */
+    nav {
+        background-color: var(--h-bg);
+
+    }
+
+    nav ul {
+        list-style: none;
+        display: flex;
+        flex-direction: column;
+    }
+
+    nav a {
+        display: block;
+        text-align: right;
+        padding: 1rem;
+        font-family: var(--h-family-font);
+    }
+
+    /* nav a:hover {
+        text-decoration: underline double;
+        background-color: #eee;
+        color: #000;
+    } */
+
+
+    #menu {
+        grid-area: menu;
+        display: inline-flex;
+        position: absolute;
+        right: 1%;
+        font-size: 1.5rem;
+        font-weight: 700;
+        text-decoration: none;
+        padding: 0.5rem 0rem;
+        color: var(--main-color);
+    }
+
+    #menu::before {
+        display: flex;
+        justify-content: end;
+        margin-right: 50px;
+        content: "≡";
+
+    }
+
+    .navigation {
+        list-style: none;
+        margin: 0 auto;
+        /* max-width: 760px; */
+    }
+
+    .navigation li {
+        display: none;
+    }
+
+    .navigation a {
+        display: block;
+        padding: 0.75rem;
+        text-align: right;
+        text-decoration: none;
+        color: var(--main-color);
+        font-weight: 700;
+        transition: 0.5s;
+        font-size: 1rem
+    }
+
+    .navigation a:hover,
+    .navigation a:active {
+        background-color: var(--main-color);
+        color: #fff;
+    }
+
+    .show li {
+        display: block;
+    }
+
+    #menu.show::before {
+        content: "X";
+    }
+
     .hero {
         flex-direction: column;
         text-align: center;
@@ -171,6 +305,26 @@ header img {
         flex: 1 1 100%;
         margin-top: 2rem;
     }
+
+    /* Buttons */
+    .hero-buttons {
+        justify-content: center;
+    }
+
+    .site-footer {
+        flex-direction: column;
+        text-align: center;
+        gap: 1rem;
+    }
+
+    .footer-left {
+        flex-direction: column;
+        gap: 0.5rem;
+    }
+
+    footer p {
+        font-size: 80%;
+    }
 }
 
 
@@ -182,10 +336,10 @@ header img {
     }
 } */
 
-@media (max-width: 639px) {
+/*@media (max-width: 639px) {
 
-    /* mobile **************************/
-    /* header {
+     mobile **************************/
+/* header {
         margin: 0 auto;
         background-color: #00568f;
         display: grid;
