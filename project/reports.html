@@ -24,29 +24,68 @@
         <a id="menu" href="#"></a>
         <nav>
             <ul class="navigation">
-                <li><a href="index.html" class="actual">Home</a></li>
-                <li><a href="planner.html">Planner</a></li>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="planner.html" class="actual">Planner</a></li>
                 <li><a href="reports.html">Reports</a></li>
             </ul>
         </nav>
     </header>
-    <main id="main">
-        <section class="hero">
-            <div class="hero-content">
-                <h1 class="hero-title">Take Control of Your Family Budget</h1>
-                <p class="hero-description">
-                    Take charge of your financial journey, set realistic and meaningful goals, and track your progress
-                    with ease using our Family Budget Planner. Inspire your family to make wise financial decisions and
-                    work together to build a secure and prosperous future.
-                </p>
-                <div class="hero-buttons">
-                    <a href="planner.html" class="btn primary-btn">Start Planning</a>
-                    <a href="reports.html" class="btn secondary-btn">View Reports</a>
+    <main class="reports-main">
+        <section class="summary">
+            <h2>Financial Summary</h2>
+            <div class="summary-cards">
+                <div class="card income">
+                    <h3>Total Income</h3>
+                    <p id="total-income">0</p>
+                </div>
+                <div class="card expenses">
+                    <h3>Total Expenses</h3>
+                    <p id="total-expenses">0</p>
+                </div>
+                <div class="card balance">
+                    <h3>Net Balance</h3>
+                    <p id="net-balance">0</p>
                 </div>
             </div>
-            <div class="hero-image">
-                <img src="images/happy-family.webp" alt="Happy family reviewing their budget together" loading="lazy">
-            </div>
+        </section>
+
+        <section class="filters">
+            <h3>Filter Reports</h3>
+            <form id="filter-form">
+                <label for="month">Month:</label>
+                <select id="month" name="month">
+                    <option value="">All</option>
+                    <option value="1">January</option>
+                    <option value="2">February</option>
+                    <option value="3">March</option>
+                    <option value="4">April</option>
+                    <option value="5">May</option>
+                    <option value="6">June</option>
+                    <option value="7">July</option>
+                    <option value="8">August</option>
+                    <option value="9">September</option>
+                    <option value="10">October</option>
+                    <option value="11">November</option>
+                    <option value="12">December</option>
+                </select>
+
+                <label for="year">Year:</label>
+                <select id="year" name="year">
+                    <option value="">All</option>
+                </select>
+
+                <button type="submit" class="btn-primary">Apply Filters</button>
+            </form>
+        </section>
+
+        <section class="chart-section">
+            <h3>Income vs Expenses</h3>
+            <canvas id="budgetChart"></canvas>
+        </section>
+
+        <section class="transactions">
+            <h3>Transactions</h3>
+            <ul id="transaction-list"></ul>
         </section>
     </main>
 

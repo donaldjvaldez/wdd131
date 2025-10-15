@@ -94,7 +94,7 @@ header img {
     font-weight: 700;
     font-size: 2rem;
     line-height: 1.2;
-    color: var(--text);
+    color: var(--main-color);
     margin-bottom: 1rem;
 }
 
@@ -327,6 +327,331 @@ footer p {
     }
 }
 
+/* ===========================
+   PLANNER PAGE STYLES
+   =========================== */
+
+/* Page container */
+.planner-main {
+    max-width: var(--max-width);
+    margin: 0 auto;
+    padding: 2rem 1rem;
+    font-family: var(--regular-family-font);
+    color: var(--text);
+}
+
+/* Section cards */
+.planner-section {
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+    padding: 1.5rem;
+    margin-bottom: 1.5rem;
+}
+
+/* Headings */
+.planner-section h2,
+.planner-section h3 {
+    color: var(--main-color);
+    font-family: var(--h-family-font);
+    margin-bottom: 1rem;
+    text-align: center;
+}
+
+/* Form layout */
+.budget-form {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1rem 1.5rem;
+    align-items: center;
+}
+
+.budget-form label {
+    font-weight: 600;
+}
+
+.budget-form input,
+.budget-form select {
+    padding: 0.6rem;
+    border-radius: 8px;
+    border: 1px solid #ccc;
+    font-size: 1rem;
+    transition: border-color 0.2s ease;
+}
+
+.budget-form input:focus,
+.budget-form select:focus {
+    border-color: var(--main-color);
+    outline: none;
+}
+
+.budget-form button {
+    grid-column: span 2;
+    padding: 0.8rem 1.2rem;
+    background-color: var(--main-color);
+    color: #fff;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 1rem;
+    font-family: var(--h-family-font);
+    transition: background-color 0.3s ease;
+}
+
+.budget-form button:hover {
+    background-color: #256e46;
+}
+
+/* Budget list */
+.budget-list {
+    list-style: none;
+    padding: 0;
+    margin-top: 1rem;
+}
+
+.budget-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: var(--bg-light);
+    padding: 0.8rem 1rem;
+    margin-bottom: 0.6rem;
+    border-radius: 8px;
+    box-shadow: 0 1px 4px rgba(0, 0, 0, 0.08);
+    font-weight: 500;
+}
+
+.budget-item.income {
+    border-left: 6px solid #4caf50;
+}
+
+.budget-item.expense {
+    border-left: 6px solid #f44336;
+}
+
+/* Summary section */
+.summary {
+    text-align: center;
+    background-color: var(--bg-light);
+    padding: 1.5rem;
+    border-radius: 10px;
+}
+
+.summary p {
+    font-size: 1.1rem;
+    margin: 0.5rem 0;
+}
+
+.summary span {
+    font-weight: bold;
+    color: var(--main-color);
+}
+
+/* Mobile */
+@media (max-width: 768px) {
+    .budget-form {
+        grid-template-columns: 1fr;
+    }
+
+    .budget-form button {
+        grid-column: span 1;
+    }
+
+    .planner-section {
+        padding: 1rem;
+    }
+}
+
+/* ---------------------------- */
+/*  REPORTS PAGE STYLING       */
+/* ---------------------------- */
+
+.reports-main {
+    padding: 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* ===== SUMMARY SECTION ===== */
+.summary {
+    text-align: center;
+    margin-bottom: 3rem;
+}
+
+.summary h2 {
+    font-size: 1.8rem;
+    font-family: var(--h-family-font);
+    margin-bottom: 1.5rem;
+    color: var(--accent-color);
+}
+
+.summary-cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 1.5rem;
+}
+
+.summary-cards .card {
+    background-color: var(--card-bg, #ffffff);
+    border-radius: 12px;
+    padding: 1.5rem;
+    box-shadow: 0 3px 8px rgba(0, 0, 0, 0.08);
+    transition: transform 0.2s ease;
+}
+
+.summary-cards .card:hover {
+    transform: translateY(-5px);
+}
+
+.summary-cards .card h3 {
+    margin-bottom: 0.8rem;
+    font-family: var(--h-family-font);
+    color: var(--text-color);
+}
+
+.summary-cards .card p {
+    font-size: 1.5rem;
+    font-weight: 600;
+}
+
+/* Card color accents */
+.summary-cards .income p {
+    color: #2ecc71;
+    /* green */
+}
+
+.summary-cards .expenses p {
+    color: #e74c3c;
+    /* red */
+}
+
+.summary-cards .balance p {
+    color: #3498db;
+    /* blue */
+}
+
+/* ===== FILTERS SECTION ===== */
+.filters {
+    background-color: var(--section-bg, #f9fafb);
+    border-radius: 12px;
+    padding: 1.5rem 2rem;
+    margin-bottom: 3rem;
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.05);
+}
+
+.filters h3 {
+    margin-bottom: 1rem;
+    color: var(--accent-color);
+}
+
+#filter-form {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 1rem;
+}
+
+#filter-form label {
+    font-weight: 500;
+}
+
+#filter-form select {
+    padding: 0.4rem 0.6rem;
+    border-radius: 6px;
+    border: 1px solid #ccc;
+    font-family: inherit;
+}
+
+#filter-form .btn-primary {
+    background-color: var(--accent-color);
+    color: #fff;
+    border: none;
+    padding: 0.5rem 1rem;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+#filter-form .btn-primary:hover {
+    background-color: var(--accent-color-dark, #2563eb);
+}
+
+/* ===== CHART SECTION ===== */
+.chart-section {
+    margin-bottom: 3rem;
+    text-align: center;
+}
+
+.chart-section h3 {
+    margin-bottom: 1rem;
+    color: var(--accent-color);
+}
+
+#budgetChart {
+    width: 100%;
+    max-width: 800px;
+    height: 400px;
+    margin: 0 auto;
+    display: block;
+}
+
+/* ===== TRANSACTION LIST ===== */
+.transactions {
+    margin-bottom: 3rem;
+}
+
+.transactions h3 {
+    color: var(--accent-color);
+    margin-bottom: 1rem;
+}
+
+#transaction-list {
+    list-style: none;
+    padding: 0;
+}
+
+#transaction-list li {
+    display: flex;
+    justify-content: space-between;
+    background-color: var(--card-bg, #fff);
+    border-radius: 10px;
+    margin-bottom: 0.8rem;
+    padding: 0.8rem 1rem;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+}
+
+#transaction-list li.income {
+    border-left: 6px solid #2ecc71;
+}
+
+#transaction-list li.expense {
+    border-left: 6px solid #e74c3c;
+}
+
+#transaction-list span {
+    font-weight: 500;
+    color: var(--text-color);
+}
+
+/* ===== RESPONSIVENESS ===== */
+@media (max-width: 700px) {
+    .reports-main {
+        padding: 1.2rem;
+    }
+
+    .summary-cards {
+        grid-template-columns: 1fr;
+    }
+
+    #filter-form {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    #budgetChart {
+        height: 300px;
+    }
+}
 
 /* Tablets and landscape mobile view */
 /* @media (min-width: 640px) and (max-width: 1023px) {
