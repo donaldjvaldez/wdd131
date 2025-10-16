@@ -476,11 +476,11 @@ footer p {
 .summary {
     text-align: center;
     margin-bottom: 3rem;
+    font-family: var(--h-family-font);
 }
 
 .summary h2 {
     font-size: 1.8rem;
-    font-family: var(--h-family-font);
     margin-bottom: 1.5rem;
     color: var(--accent-color);
 }
@@ -516,17 +516,17 @@ footer p {
 
 /* Card color accents */
 .summary-cards .income p {
-    color: #2ecc71;
+    color: var(--main-color);
     /* green */
 }
 
 .summary-cards .expenses p {
-    color: #e74c3c;
+    color: #a11000;
     /* red */
 }
 
 .summary-cards .balance p {
-    color: #3498db;
+    color: #0060a0;
     /* blue */
 }
 
@@ -537,6 +537,7 @@ footer p {
     padding: 1.5rem 2rem;
     margin-bottom: 3rem;
     box-shadow: 0 3px 6px rgba(0, 0, 0, 0.05);
+    font-family: var(--regular-family-font);
 }
 
 .filters h3 {
@@ -564,7 +565,7 @@ footer p {
 
 #filter-form .btn-primary {
     background-color: var(--accent-color);
-    color: #fff;
+    color: var(--main-color);
     border: none;
     padding: 0.5rem 1rem;
     border-radius: 6px;
@@ -573,7 +574,8 @@ footer p {
 }
 
 #filter-form .btn-primary:hover {
-    background-color: var(--accent-color-dark, #2563eb);
+    background-color: var(--accent-color-dark, #0060a0);
+    color: var(--bg-light);
 }
 
 /* ===== CHART SECTION ===== */
@@ -598,6 +600,7 @@ footer p {
 /* ===== TRANSACTION LIST ===== */
 .transactions {
     margin-bottom: 3rem;
+    font-family: var(--regular-family-font);
 }
 
 .transactions h3 {
@@ -634,7 +637,7 @@ footer p {
 }
 
 /* ===== RESPONSIVENESS ===== */
-@media (max-width: 700px) {
+@media (max-width: 768px) {
     .reports-main {
         padding: 1.2rem;
     }
@@ -650,6 +653,97 @@ footer p {
 
     #budgetChart {
         height: 300px;
+    }
+}
+
+/* ---------------------------- */
+/* References Page Styling      */
+/* ---------------------------- */
+
+.references {
+    max-width: 900px;
+    margin: 2rem auto;
+    padding: 1rem;
+}
+
+.references h1 {
+    text-align: center;
+    font-family: "Nunito", sans-serif;
+    font-size: 2rem;
+    color: var(--main-color);
+    margin-bottom: 2rem;
+    border-bottom: 2px solid var(--accent-color, #f4b400);
+    display: inline-block;
+    padding-bottom: 0.25rem;
+}
+
+.references article {
+    background-color: var(--h-bg);
+    border-radius: 1rem;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+    padding: 1.5rem;
+    margin-bottom: 1.5rem;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.references article:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.references h2 {
+    font-family: "Nunito", sans-serif;
+    font-size: 1.3rem;
+    color: var(--main-color);
+    margin-bottom: 1rem;
+    border-left: 4px solid #f4b400;
+    padding-left: 0.5rem;
+}
+
+.references ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.references ul li {
+    margin-bottom: 0.75rem;
+    line-height: 1.6;
+    font-family: var(--h-family-font);
+    font-size: 1rem;
+}
+
+.references a {
+    color: var(--main-color);
+    text-decoration: none;
+    font-weight: 500;
+    text-decoration: underline;
+}
+
+.references a:hover {
+    text-decoration: underline;
+    color: #f4b400;
+}
+
+.references p {
+    font-family: var(--h-family-font);
+    font-size: 1rem;
+    line-height: 1.6;
+    margin-top: 1rem;
+}
+
+/* Small screens */
+@media (max-width: 768px) {
+    .references {
+        padding: 0.5rem;
+    }
+
+    .references h1 {
+        font-size: 1.6rem;
+    }
+
+    .references article {
+        padding: 1rem;
     }
 }
 
