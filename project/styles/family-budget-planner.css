@@ -580,6 +580,7 @@ footer p {
 
 /* ===== CHART SECTION ===== */
 .chart-section {
+    font-family: var(--regular-family-font);
     margin-bottom: 3rem;
     text-align: center;
 }
